@@ -25,7 +25,11 @@ public class CustomPasswordGrantHandler extends PasswordGrantHandler {
         if (log.isDebugEnabled()) {
             log.debug("Username: " + userFromRequest + ", SP tenant domain: " + tenantDomain);
         }
-        tokReqMsgCtx.getOauth2AccessTokenReqDTO().setResourceOwnerUsername(userFromRequest + "@" + tenantDomain);
+
+        if (userFromRequest != null && tenantDomain != null) {
+            tokReqMsgCtx.getOauth2AccessTokenReqDTO().setResourceOwnerUsername(userFromRequest.trim() + "@"
+                    + tenantDomain);
+        }
 
         return super.validateGrant(tokReqMsgCtx);
     }
