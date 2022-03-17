@@ -1,6 +1,6 @@
 # Custom Password Grant Handler for  [WSO2 Identity Server](https://wso2.com/identity-and-access-management/)
 
- * This custom password grant handler overrides the default password grant handler to to avoid apending tenant domain to the end of username.
+ * This custom password grant handler overrides the default password grant handler to skip the requirement of apending tenant domain to the end of username in multi-tenancy.
  * This uses SP tenant to identify the user tenant.
  * This is not compatible with SaaS service providers since they identify the user tenant from the username itself.
 
