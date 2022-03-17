@@ -6,7 +6,7 @@
 
 ### Steps to deploy
 - Build the component by running "mvn clean install".
-- Copy `custom-password-grant-1.0.0.jar` file which can be found in target directory into `<IS_HOME>/repository/components/lib' directory.
+- Copy `custom-password-grant-1.0.0.jar` file which can be found in target directory into `<IS_HOME>/repository/components/lib` directory.
 - Open `repository/conf/identity/identity.xml` file and look for following block.
 ```dtd
 <SupportedGrantType>
